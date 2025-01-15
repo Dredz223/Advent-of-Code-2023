@@ -13,14 +13,12 @@ func main() {
 	if ferr != nil {
 		panic(ferr)
 	}
-	ctr := 1
 	var sum int
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		line := scanner.Text()
 		re := regexp.MustCompile("[0-9]")
 		nums := re.FindAllString(line, -1)
-		ctr++
 		arrlen := len(nums)
 
 		//NumZero Tens place, NumOne Ones Place
