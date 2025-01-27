@@ -21,7 +21,7 @@ func main() {
 	for scanner.Scan() {
 		line := scanner.Text()
 		// fmt.Printf("Text%v ", line)
-		re := regexp.MustCompile("([0-9]|twone|oneight|nineight|one|two|three|four|five|six|seven|eight|nine)")
+		re := regexp.MustCompile("([0-9]|eightwo|twone|oneight|nineight|one|two|three|four|five|six|seven|eight|nine)")
 		//zerone, oneight, twone, threeight, fiveight, nineight,
 		// re2 := regexp.MustCompile(re.ReplaceAllLiteralString())
 		nums := re.FindAllString(line, -1)
@@ -44,6 +44,8 @@ func main() {
 			fstr = "1"
 		} else if fstr == "twone" {
 			fstr = "2"
+		} else if fstr == "eightwo" {
+			fstr = "8"
 		} else if fstr == "nineight" {
 			fstr = "9"
 		} else {
@@ -76,6 +78,8 @@ func main() {
 			lstr = "8"
 		} else if lstr == "twone" {
 			lstr = "1"
+		} else if lstr == "eightwo" {
+			lstr = "2"
 		} else if lstr == "nineight" {
 			lstr = "8"
 		} else {
